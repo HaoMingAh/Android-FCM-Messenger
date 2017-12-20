@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">En1gma Messenger</string>
+
+    <string name="verification_code">Verification Code</string>
+    <string name="btn_continue">Continue</string>
+    <string name="send_code">Send Verification Code</string>
+    <string name="resend">Resend Code</string>
+    <string name="oops">Oops!</string>
+    <string name="success">Success!</string>
+    <string name="input_valid_phone">Please input valid phone number.</string>
+    <string name="input_valid_code">Please input valid code.</string>
+    <string name="menu_edit">new message</string>
+    <string name="menu_plus">new contact</string>
+    <string name="contacts">Contacts</string>
+    <string name="messages">Messages</string>
+    <string name="hint_enter_a_message">Type a message…</string>
+    <string name="connect_failed">Connection to the server failed.\nPlease try again.</string>
+    <string name="sent_code">Just sent verification code to your phone.\nplease input code and continue. </string>
+    <string name="wrong_phone">The phone number is not registered.</string>
+    <string name="setting">Go to Settings</string>
+    <string name="finger_available">Please place your fingertip on the scanner to verify your identity.</string>
+    <string name="finger_notavailable">Your device should have at least one fingerprint registered in device settings.</string>
+    <string name="new_message">New message received.</string>
+    <string name="auth_fail">Cannot recognize your finger print. Please try again.</string>
+    <string name="wrong">Something went wrong, please try again.</string>
+    <string name="delete">Delete</string>
+
+
+</resources>

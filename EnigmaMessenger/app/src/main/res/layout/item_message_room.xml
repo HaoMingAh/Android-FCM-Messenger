@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tubb.smrv.SwipeHorizontalMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sml="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sml"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    sml:sml_scroller_interpolator="@android:anim/bounce_interpolator"
+    sml:sml_auto_open_percent="0.2"
+    sml:sml_scroller_duration="250">
+
+    <LinearLayout
+        android:id="@id/smContentView"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_message_imv_unread"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_margin="12dp"
+                android:src="@color/colorPrimary"
+                android:layout_gravity="center_vertical"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/item_message_imv_profile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/img_user"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:padding="4dp">
+
+                <TextView
+                    android:id="@+id/item_message_txv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:maxLines="1"
+                    android:textColor="@color/darkgray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/item_message_txv_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="hello"
+                    android:textSize="14sp"
+                    android:textColor="@color/darkgray"
+                    android:maxLines="2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_message_txv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="now"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eee"
+            android:layout_marginLeft="32dp"
+            android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@id/smMenuViewRight"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_light">
+
+        <TextView
+            android:id="@+id/txv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/delete"/>
+
+    </FrameLayout>
+
+</com.tubb.smrv.SwipeHorizontalMenuLayout>

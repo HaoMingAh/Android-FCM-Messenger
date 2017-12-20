@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize">
+
+        <LinearLayout
+            android:id="@+id/activity_message_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/colorPrimary">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/activity_message_imv_profile"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/img_user"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/activity_message_txv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:text="John Doe" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/activity_message_imv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/icon_phone_white"
+            android:layout_gravity="center_vertical|right"
+            android:layout_margin="12dp"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.stfalcon.chatkit.messages.MessagesList
+            android:id="@+id/messagesList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/inputbar"
+            app:incomingBubblePaddingLeft="12dp"
+            app:incomingBubblePaddingRight="12dp"
+            app:incomingBubblePaddingBottom="8dp"
+            app:incomingBubblePaddingTop="8dp"
+            app:outcomingBubblePaddingLeft="12dp"
+            app:outcomingBubblePaddingRight="12dp"
+            app:outcomingBubblePaddingBottom="8dp"
+            app:outcomingBubblePaddingTop="8dp"
+            app:incomingAvatarHeight="0dp"
+            app:incomingAvatarWidth="0dp"
+            app:textAutoLink="all"
+            app:incomingBubbleDrawable="@drawable/bg_custom_incoming_message"
+            app:outcomingBubbleDrawable="@drawable/bg_custom_outcoming_message"
+            app:outcomingTimeTextColor="@color/gray_dark_transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/inputbar"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/gray_dark_transparent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/inputbar">
+
+            <com.stfalcon.chatkit.messages.MessageInput
+                android:id="@+id/activity_message_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:inputTextColor="@color/gray"
+                app:showAttachmentButton="false"
+                app:inputMaxLines="3"
+                app:inputButtonBackground="@drawable/bg_custom_layout_send"
+                app:inputButtonDefaultIconColor="@color/white"
+                app:inputButtonDefaultIconDisabledColor="@color/white60"
+                app:inputHint="@string/hint_enter_a_message" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
